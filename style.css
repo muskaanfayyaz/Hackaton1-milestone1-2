@@ -15,6 +15,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 19px 38px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+    box-sizing: border-box;
 }
 
 /* Left Section Styling */
@@ -25,6 +26,7 @@ body {
     width: 35%;
     text-align: center;
     border-right: 5px solid #e59e3b69; 
+    box-sizing: border-box;
 }
 
 .profile-picture {
@@ -34,6 +36,7 @@ body {
     border-radius: 50%;
     border: 5px solid #e59e3b69; 
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -83,6 +86,7 @@ ul li {
 .right-section {
     padding: 20px;
     width: 65%;
+    box-sizing: border-box;
 }
 
 /* Button Styling */
@@ -100,4 +104,74 @@ button {
 
 button:hover {
     background-color: #266b5da0; 
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and Medium Devices */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column; /* Stack the sections vertically */
+    }
+
+    .left-section, 
+    .right-section {
+        width: 100%; /* Full width for both sections */
+        padding: 15px;
+        text-align: center; /* Center-align content for smaller screens */
+    }
+
+    .left-section {
+        border-right: none; /* Remove the border for stacked layout */
+    }
+
+    .right-section h1 {
+        font-size: 20px;
+    }
+
+    .right-section p {
+        text-align: center;
+    }
+
+    .form-container {
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .form-container {
+        width: 100%; /* Full width for form */
+    }
+
+    .resume-container {
+        width: 100%; /* Full width for resume container */
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px; /* Adjust profile picture size */
+        margin: 10% auto; /* Center it on mobile */
+    }
+
+    .right-section p {
+        text-align: left;
+    }
+
+    h1, h3 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
 }
